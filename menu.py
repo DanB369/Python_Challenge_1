@@ -209,3 +209,4 @@ for item in menu_order:
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
 total = sum([float(item["Price"]) * float(item["Quantity"]) for item in menu_order])
+print(f"Total: ${total}")
