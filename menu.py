@@ -60,10 +60,14 @@ print("Welcome to the variety food truck.")
 
 # Customers may want to order multiple items, so let's create a continuous
 # loop
+
+
 place_order = True
-while place_order:
+while True:
+
     if place_order == False:
         break
+
     # Ask the customer from which menu category they want to order
     print("From which menu would you like to order? ")
 
@@ -160,27 +164,27 @@ while place_order:
         print("You didn't select a number.")
 
     while True:
-        if place_order == False:
-            break
+
         # Ask the customer if they would like to order anything else
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         
         # 5. Check the customer's input
-        if keep_ordering.lower() == "y":
-                # Keep ordering
-                place_order = True
-                # Exit the keep ordering question loop
-        elif keep_ordering.lower() == "n":
-                # Complete the order
-                place_order = False
-                # Since the customer decided to stop ordering, thank them for
-                # their order
-                print("Thank you for your order.")
-                # Exit the keep ordering question loop
-
-                # Tell the customer to try again
-        else: print("You did not make a valid selction please try again. ")
+        if keep_ordering.upper() == "Y":
+            # Keep ordering
+            break
+            # Exit the keep ordering question loop
+        elif keep_ordering.upper() == "N":
+            # Complete the order
+            # Since the customer decided to stop ordering, thank them for
+            # their order
+            print("Thank you for your order.")
+            # Exit the keep ordering question loop
+            place_order = False
+            break
+            # Tell the customer to try again
+        else:
+            print("You did not make a valid selection. Please try again.")
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
