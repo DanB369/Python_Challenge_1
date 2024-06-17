@@ -203,7 +203,7 @@ for item in menu_order:
     item_spaces = " " * num_item_spaces
 
     # 10. Print the item name, price, and quantity
-    print(f"{item_name}{item_spaces}| ${item['Price']}{item_spaces} | {item['Quantity']}")
+    print(f"{item_name}{item_spaces}| ${item['Price']}  | {item['Quantity']}")
 
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
